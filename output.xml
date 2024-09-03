@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-03T14:24:51.747654" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\PythonProjects\HouseSearchingRobot\Tests">
+<suite id="s1-s1" name="Searching" source="C:\PythonProjects\HouseSearchingRobot\Tests\Searching.robot">
+<kw name="Open Browser With Custom Profile" owner="searching" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:52.544440" level="INFO">Opening browser 'edge' to base url 'https://www.otodom.pl'.</msg>
+<arg>${HOME_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-03T14:24:52.542440" elapsed="3.547541"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-03T14:24:56.091982" elapsed="0.064014"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=onetrust-accept-btn-handler</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T14:24:56.155996" elapsed="0.104023"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:56.261019" level="INFO">Clicking button 'id=onetrust-accept-btn-handler'.</msg>
+<arg>id=onetrust-accept-btn-handler</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:56.260019" elapsed="0.096021"/>
+</kw>
+<status status="PASS" start="2024-09-03T14:24:52.539439" elapsed="3.817601"/>
+</kw>
+<test id="s1-s1-t1" name="Searching in otodom" line="11">
+<kw name="Click Type Dropdown" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:56.362042" level="INFO">Clicking element 'css:.react-select__control'.</msg>
+<arg>css:.react-select__control</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:56.361041" elapsed="0.059027"/>
+</kw>
+<status status="PASS" start="2024-09-03T14:24:56.360041" elapsed="0.061015"/>
+</kw>
+<kw name="Select Type Dropdown Option" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:56.424056" level="INFO">Clicking element 'xpath=//div[@role='option' and text()='Domy']'.</msg>
+<arg>xpath=//div[@role='option' and text()='${estate_type}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:56.423056" elapsed="0.135030"/>
+</kw>
+<arg>Domy</arg>
+<status status="PASS" start="2024-09-03T14:24:56.422056" elapsed="0.137030"/>
+</kw>
+<kw name="Select Distance From list" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:56.562086" level="INFO">Clicking element 'css:.css-100wgto'.</msg>
+<arg>css:.${class_name}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:56.561087" elapsed="0.055011"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:56.618099" level="INFO">Clicking element 'xpath=//div[@aria-label='+ 15 km']'.</msg>
+<arg>xpath=//div[@aria-label='${label_text}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:56.616098" elapsed="0.052013"/>
+</kw>
+<arg>css-100wgto</arg>
+<arg>+ 15 km</arg>
+<status status="PASS" start="2024-09-03T14:24:56.559086" elapsed="0.110025"/>
+</kw>
+<kw name="Enter City in Input" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:56.671111" level="INFO">Clicking element 'xpath=//input[@placeholder='Wpisz lokalizację']'.</msg>
+<arg>xpath=//input[@placeholder='${placeholder_text}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:56.670111" elapsed="0.055012"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:56.726123" level="INFO">Typing text 'Warszawa' into text field 'xpath=//input[@data-cy='search.form.location.input']'.</msg>
+<arg>xpath=//input[@data-cy='search.form.location.input']</arg>
+<arg>${input_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:56.725123" elapsed="0.095021"/>
+</kw>
+<arg>Wpisz lokalizację</arg>
+<arg>Warszawa</arg>
+<status status="PASS" start="2024-09-03T14:24:56.669111" elapsed="0.152033"/>
+</kw>
+<kw name="Select City On List" owner="searching">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[.//mark[contains(text(), '${text}')]]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T14:24:56.823145" elapsed="0.732386"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:57.556531" level="INFO">Clicking element 'xpath=//p[.//mark[contains(text(), 'Warszawa')]]/..'.</msg>
+<arg>xpath=//p[.//mark[contains(text(), '${text}')]]/..</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:57.555531" elapsed="0.062014"/>
+</kw>
+<arg>Warszawa</arg>
+<status status="PASS" start="2024-09-03T14:24:56.822145" elapsed="0.795400"/>
+</kw>
+<kw name="Enter Max Price" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:57.620546" level="INFO">Clicking element 'id=priceMax'.</msg>
+<arg>id=priceMax</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:57.619545" elapsed="0.046010"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:57.667556" level="INFO">Typing text '900000' into text field 'id=priceMax'.</msg>
+<arg>id=priceMax</arg>
+<arg>${price}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:57.666556" elapsed="0.055185"/>
+</kw>
+<arg>900000</arg>
+<status status="PASS" start="2024-09-03T14:24:57.618545" elapsed="0.103196"/>
+</kw>
+<kw name="Click Wyszukaj" owner="searching">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:57.725741" level="INFO">Clicking button 'id=search-form-submit'.</msg>
+<arg>id=search-form-submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:57.724741" elapsed="0.068017"/>
+</kw>
+<status status="PASS" start="2024-09-03T14:24:57.722741" elapsed="0.070017"/>
+</kw>
+<kw name="Click Element By Partial Text" owner="searching">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), '${text}')]</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T14:24:57.794757" elapsed="1.293988"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:59.089746" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Data dodania: najnowsze')]'.</msg>
+<arg>xpath=//*[contains(text(), '${text}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:59.088745" elapsed="0.380085"/>
+</kw>
+<arg>Data dodania: najnowsze</arg>
+<status status="PASS" start="2024-09-03T14:24:57.793757" elapsed="1.675073"/>
+</kw>
+<kw name="Select Type Dropdown Option" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T14:24:59.472831" level="INFO">Clicking element 'xpath=//div[@role='option' and text()='Cena: od najniższej']'.</msg>
+<arg>xpath=//div[@role='option' and text()='${estate_type}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T14:24:59.471831" elapsed="2.193915"/>
+</kw>
+<arg>Cena: od najniższej</arg>
+<status status="PASS" start="2024-09-03T14:24:59.470830" elapsed="2.195917"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T14:25:04.667770" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T14:25:01.667746" elapsed="3.000024"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-03T14:25:04.668771" elapsed="2.158295"/>
+</kw>
+<status status="PASS" start="2024-09-03T14:24:56.358041" elapsed="10.469025"/>
+</test>
+<status status="PASS" start="2024-09-03T14:24:51.845677" elapsed="14.985390"/>
+</suite>
+<status status="PASS" start="2024-09-03T14:24:51.787663" elapsed="15.046405"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Searching">Tests.Searching</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

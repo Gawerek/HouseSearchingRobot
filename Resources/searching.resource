@@ -4,7 +4,7 @@ Library    ../python_scripts/browser_setup.py
 
 *** Variables ***
 ${HOME_URL}         https://www.otodom.pl
-${BROWSER}          Firefox
+${BROWSER}          edge
 
 
 *** Keywords ***
@@ -48,4 +48,12 @@ Select City On List
 
 Click Wyszukaj
     Click Button    id=search-form-submit
+
+Click Element By Partial Text
+    [Arguments]    ${text}
+    # Locate the element by partial text match and click it
+    Wait Until Element Is Visible    xpath=//*[contains(text(), '${text}')]    timeout=20s
+    Click Element                   xpath=//*[contains(text(), '${text}')]
+
+
 

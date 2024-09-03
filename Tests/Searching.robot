@@ -16,7 +16,9 @@ Searching in otodom
     Select City On List   Warszawa
     Enter Max Price     900000
     Click Wyszukaj
-    Sleep    3
+    Click Element By Partial Text       Data dodania: najnowsze
+    Select Type Dropdown Option    Cena: od najniższej
+    Sleep   3
     [Teardown]    Close Browser
 
 
