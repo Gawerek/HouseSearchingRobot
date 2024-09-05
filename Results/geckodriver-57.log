@@ -1,0 +1,21 @@
+1725548058129	geckodriver	INFO	Listening on 127.0.0.1:55306
+1725548061197	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55307" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\micha\\AppData\\Local\\Temp\\rust_mozprofilejERula"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1725548061548	Marionette	INFO	Marionette enabled
+1725548061683	Marionette	INFO	Listening on port 55316
+WebDriver BiDi listening on ws://127.0.0.1:55307
+Read port: 55316
+1725548061805	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55307/devtools/browser/fafa8df9-8884-4660-a26e-40a434d047f6
+JavaScript warning: https://cdn.slots.baxter.olx.org/_assets/videojsima/2.3.0.1/videojsima-with-deps.min.js, line 49: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+1725548072094	Marionette	INFO	Stopped listening on port 55316
+JavaScript warning: https://cdn.cookielaw.org/scripttemplates/202401.2.0/otBannerSdk.js, line 7: Script terminated by timeout at:
+M/e/<@https://cdn.cookielaw.org/scripttemplates/202401.2.0/otBannerSdk.js:7:1235
+n@https://cdn.cookielaw.org/scripttemplates/202401.2.0/otBannerSdk.js:7:771
+
+Dynamically enable window occlusion 1

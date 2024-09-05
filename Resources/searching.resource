@@ -1,10 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    ../python_scripts/browser_setup.py
+Library    OperatingSystem
 
 *** Variables ***
 ${HOME_URL}         https://www.otodom.pl
-${BROWSER}          edge
+${BROWSER}          Firefox
 
 
 *** Keywords ***
@@ -23,6 +23,7 @@ Select Type Dropdown Option
     [Arguments]     ${estate_type}
     Click Element    xpath=//div[@role='option' and text()='${estate_type}']
 
+
 Select Distance From list
     [Arguments]    ${class_name}    ${label_text}
     # Click the element by its class name
@@ -33,6 +34,16 @@ Enter Max Price
     [Arguments]     ${price}
     Click Element    id=priceMax
     Input Text    id=priceMax      ${price}
+
+Enter Min Price
+    [Arguments]     ${price}
+    Click Element    id=priceMin
+    Input Text    id=priceMin   ${price}
+
+Select Rooms
+    [Arguments]     ${rooms_number}
+    Wait Until Element Is Visible    css=#roomsNumber
+    Click Element    xpath=//*[@id="roomsNumber"]//*[text()='${rooms_number}']
 
 Enter City in Input
     [Arguments]    ${placeholder_text}    ${input_text}
@@ -47,6 +58,7 @@ Select City On List
     Click Element                   xpath=//p[.//mark[contains(text(), '${text}')]]/..
 
 Click Wyszukaj
+    Wait Until Element Is Enabled    id=search-form-submit
     Click Button    id=search-form-submit
 
 Click Element By Partial Text
@@ -55,5 +67,30 @@ Click Element By Partial Text
     Wait Until Element Is Visible    xpath=//*[contains(text(), '${text}')]    timeout=20s
     Click Element                   xpath=//*[contains(text(), '${text}')]
 
+Click Next Page Button
+    # Set the XPath as a variable
+    ${xpath_var}=   Set Variable    //li[@aria-label='Go to next Page']
+    # Locate the element by XPath and store it in a variable
+    ${element}=   Get WebElement    xpath=//li[@aria-label='Go to next Page']
+
+    # Use JavaScript to scroll the element into view
+    Run Keyword And Ignore Error    Scroll Element Into View    xpath=${xpath_var} 
+
+    # Wait until the element is visible
+    Wait Until Element Is Enabled    xpath=${xpath_var}   timeout=10s
+
+    # Click the element
+    Click Element    xpath=${xpath_var}
+    Sleep    5
+
+Check If Next Page Exists
+    # Check if the next page button exists and is clickable
+    ${next_button_exist}=   Run Keyword And Return Status    Element Should Be Visible    xpath=//li[@aria-label='Go to next Page']
+    Return From Keyword If    ${next_button_exist}    ${next_button_exist}
+    Log    No more pages to navigate.
 
 
+Get Url
+    ${current_url}=     Get Location
+    Log    The current URL is: ${current_url}
+    RETURN  ${current_url}

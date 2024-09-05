@@ -1,0 +1,19 @@
+1725535099133	geckodriver	INFO	Listening on 127.0.0.1:58108
+1725535102199	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58109" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\micha\\AppData\\Local\\Temp\\rust_mozprofilejtywsC"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1725535102522	Marionette	INFO	Marionette enabled
+1725535102640	Marionette	INFO	Listening on port 58117
+WebDriver BiDi listening on ws://127.0.0.1:58109
+Read port: 58117
+1725535102777	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58109/devtools/browser/e16e6225-c63c-4f09-bffa-8103b740e894
+JavaScript warning: https://cdn.slots.baxter.olx.org/_assets/videojsima/2.3.0.1/videojsima-with-deps.min.js, line 49: unreachable code after return statement
+1725535109518	Marionette	INFO	Stopped listening on port 58117
+JavaScript warning: https://statics.otodom.pl/fp_statics/_next/static/chunks/93451-45e318afb3b1927e.js, line 1: Script terminated by timeout at:
+93451/eh/<.getValues<@https://statics.otodom.pl/fp_statics/_next/static/chunks/93451-45e318afb3b1927e.js:1:19037
+51187/C/<@https://statics.otodom.pl/fp_statics/_next/static/chunks/2828-9c17375bc0fedbc6.js:1:32295
+73893/t.default/a</o.current<@https://statics.otodom.pl/fp_statics/_next/static/chunks/40616-ccc30bb2c464b414.js:1:5748
+
+Dynamically enable window occlusion 1

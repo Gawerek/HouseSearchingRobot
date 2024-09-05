@@ -1,0 +1,22 @@
+1725547441415	geckodriver	INFO	Listening on 127.0.0.1:54354
+1725547444488	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54355" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\micha\\AppData\\Local\\Temp\\rust_mozprofileDPl9KZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1725547444832	Marionette	INFO	Marionette enabled
+1725547444949	Marionette	INFO	Listening on port 54367
+WebDriver BiDi listening on ws://127.0.0.1:54355
+Read port: 54367
+1725547445094	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54355/devtools/browser/93b6f8d6-d553-44c7-b166-f87b246b92a8
+JavaScript warning: https://cdn.slots.baxter.olx.org/_assets/videojsima/2.3.0.1/videojsima-with-deps.min.js, line 49: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript warning: https://cdn.slots.baxter.olx.org/_assets/videojsima/2.3.0.1/videojsima-with-deps.min.js, line 49: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/K5ZpvUWNqcUfu8Tok0Ehe0tYmYGPee5Ma71PMEE9nfI.js line 2 > eval line 5637 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/K5ZpvUWNqcUfu8Tok0Ehe0tYmYGPee5Ma71PMEE9nfI.js line 2 > eval line 1949 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/K5ZpvUWNqcUfu8Tok0Ehe0tYmYGPee5Ma71PMEE9nfI.js line 2 > eval line 7044 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1725547508016	Marionette	INFO	Stopped listening on port 54367
+Dynamically enable window occlusion 1

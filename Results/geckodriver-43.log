@@ -1,0 +1,20 @@
+1725544616855	geckodriver	INFO	Listening on 127.0.0.1:55465
+1725544619927	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55466" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\micha\\AppData\\Local\\Temp\\rust_mozprofileHFn0vo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1725544620255	Marionette	INFO	Marionette enabled
+1725544620374	Marionette	INFO	Listening on port 55473
+WebDriver BiDi listening on ws://127.0.0.1:55466
+Read port: 55473
+1725544620512	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55466/devtools/browser/51ed1516-d2c1-4b06-b5ff-abf1bdc296de
+JavaScript warning: https://cdn.slots.baxter.olx.org/_assets/videojsima/2.3.0.1/videojsima-with-deps.min.js, line 49: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript warning: https://cdn.slots.baxter.olx.org/_assets/videojsima/2.3.0.1/videojsima-with-deps.min.js, line 49: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/K5ZpvUWNqcUfu8Tok0Ehe0tYmYGPee5Ma71PMEE9nfI.js line 2 > eval line 5717 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1725544639251	Marionette	INFO	Stopped listening on port 55473
+Dynamically enable window occlusion 1

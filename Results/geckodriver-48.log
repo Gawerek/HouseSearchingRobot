@@ -1,0 +1,21 @@
+1725546590400	geckodriver	INFO	Listening on 127.0.0.1:52525
+1725546593471	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52526" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\micha\\AppData\\Local\\Temp\\rust_mozprofilex2XArr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1725546593805	Marionette	INFO	Marionette enabled
+1725546593949	Marionette	INFO	Listening on port 52533
+WebDriver BiDi listening on ws://127.0.0.1:52526
+Read port: 52533
+1725546594085	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52526/devtools/browser/464b483d-6b3d-416c-863d-ef1aa559f50b
+JavaScript warning: https://cdn.slots.baxter.olx.org/_assets/videojsima/2.3.0.1/videojsima-with-deps.min.js, line 49: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+JavaScript error: , line 0: uncaught exception: undefined
+1725546605188	Marionette	INFO	Stopped listening on port 52533
+JavaScript warning: https://statics.otodom.pl/fp_statics/_next/static/chunks/60894-bea8a50a2151eaaf.js, line 1: Script terminated by timeout at:
+96428/V/<@https://statics.otodom.pl/fp_statics/_next/static/chunks/60894-bea8a50a2151eaaf.js:1:16006
+
+Dynamically enable window occlusion 1

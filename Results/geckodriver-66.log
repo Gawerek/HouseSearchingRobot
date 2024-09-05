@@ -1,0 +1,24 @@
+1725549154485	geckodriver	INFO	Listening on 127.0.0.1:57425
+1725549157552	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57426" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\micha\\AppData\\Local\\Temp\\rust_mozprofileGGZiQr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1725549157878	Marionette	INFO	Marionette enabled
+1725549157998	Marionette	INFO	Listening on port 57436
+WebDriver BiDi listening on ws://127.0.0.1:57426
+Read port: 57436
+1725549158138	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57426/devtools/browser/bb1b7f48-dce3-4fec-88b4-53d5650a0450
+JavaScript warning: https://cdn.slots.baxter.olx.org/_assets/videojsima/2.3.0.1/videojsima-with-deps.min.js, line 49: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.otodom.pl."
+JavaScript error: , line 0: uncaught exception: undefined
+1725549168832	Marionette	INFO	Stopped listening on port 57436
+JavaScript warning: https://statics.otodom.pl/fp_statics/_next/static/chunks/main-858a35a16a8b8166.js, line 1: Script terminated by timeout at:
+86456/i/a<@https://statics.otodom.pl/fp_statics/_next/static/chunks/main-858a35a16a8b8166.js:1:25530
+i@https://statics.otodom.pl/fp_statics/_next/static/chunks/main-858a35a16a8b8166.js:1:25511
+loadRoute@https://statics.otodom.pl/fp_statics/_next/static/chunks/main-858a35a16a8b8166.js:1:27576
+86456/m/prefetch/</<@https://statics.otodom.pl/fp_statics/_next/static/chunks/main-858a35a16a8b8166.js:1:28630
+
+Dynamically enable window occlusion 1

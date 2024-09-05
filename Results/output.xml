@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-09-05T17:16:17.824125" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Projekty_Python\Robot2\BestHouseEver\Tests">
+<suite id="s1-s1" name="Searching" source="C:\Projekty_Python\Robot2\BestHouseEver\Tests\Searching.robot">
+<kw name="Open Browser With Custom Profile" owner="searching" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:18.262367" level="INFO">Opening browser 'Firefox' to base url 'https://www.otodom.pl'.</msg>
+<arg>${HOME_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-05T17:16:18.261355" elapsed="7.198028"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-05T17:16:25.459383" elapsed="0.263075"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=onetrust-accept-btn-handler</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-05T17:16:25.723651" elapsed="0.069267"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:25.794267" level="INFO">Clicking button 'id=onetrust-accept-btn-handler'.</msg>
+<arg>id=onetrust-accept-btn-handler</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:25.792918" elapsed="0.316584"/>
+</kw>
+<status status="PASS" start="2024-09-05T17:16:18.261355" elapsed="7.848147"/>
+</kw>
+<test id="s1-s1-t1" name="Searching in otodom" line="12">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-09-05T17:16:26.110502" level="INFO">${ALL_OFFERS} = {}</msg>
+<var>${ALL_OFFERS}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-09-05T17:16:26.110502" elapsed="0.000000"/>
+</kw>
+<kw name="Click Type Dropdown" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:26.111506" level="INFO">Clicking element 'css:.react-select__control'.</msg>
+<arg>css:.react-select__control</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:26.111506" elapsed="0.284639"/>
+</kw>
+<status status="PASS" start="2024-09-05T17:16:26.110502" elapsed="0.286651"/>
+</kw>
+<kw name="Select Type Dropdown Option" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:26.398171" level="INFO">Clicking element 'xpath=//div[@role='option' and text()='Domy']'.</msg>
+<arg>xpath=//div[@role='option' and text()='${estate_type}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:26.398171" elapsed="0.251255"/>
+</kw>
+<arg>Domy</arg>
+<status status="PASS" start="2024-09-05T17:16:26.397153" elapsed="0.252273"/>
+</kw>
+<kw name="Select Distance From list" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:26.650615" level="INFO">Clicking element 'css:.css-100wgto'.</msg>
+<arg>css:.${class_name}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:26.650615" elapsed="0.248498"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:26.899113" level="INFO">Clicking element 'xpath=//div[@aria-label='+ 10 km']'.</msg>
+<arg>xpath=//div[@aria-label='${label_text}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:26.899113" elapsed="0.237130"/>
+</kw>
+<arg>css-100wgto</arg>
+<arg>+ 10 km</arg>
+<status status="PASS" start="2024-09-05T17:16:26.649426" elapsed="0.486817"/>
+</kw>
+<kw name="Enter City in Input" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:27.137704" level="INFO">Clicking element 'xpath=//input[@placeholder='Wpisz lokalizację']'.</msg>
+<arg>xpath=//input[@placeholder='${placeholder_text}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:27.136243" elapsed="0.286065"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:27.422308" level="INFO">Typing text 'Warszawa' into text field 'xpath=//input[@data-cy='search.form.location.input']'.</msg>
+<arg>xpath=//input[@data-cy='search.form.location.input']</arg>
+<arg>${input_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:27.422308" elapsed="0.077235"/>
+</kw>
+<arg>Wpisz lokalizację</arg>
+<arg>Warszawa</arg>
+<status status="PASS" start="2024-09-05T17:16:27.136243" elapsed="0.363300"/>
+</kw>
+<kw name="Select City On List" owner="searching">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[.//mark[contains(text(), '${text}')]]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-05T17:16:27.500545" elapsed="0.632545"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:28.133090" level="INFO">Clicking element 'xpath=//p[.//mark[contains(text(), 'Warszawa')]]/..'.</msg>
+<arg>xpath=//p[.//mark[contains(text(), '${text}')]]/..</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:28.133090" elapsed="0.256741"/>
+</kw>
+<arg>Warszawa</arg>
+<status status="PASS" start="2024-09-05T17:16:27.499543" elapsed="0.890288"/>
+</kw>
+<kw name="Enter Min Price" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:28.389831" level="INFO">Clicking element 'id=priceMin'.</msg>
+<arg>id=priceMin</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:28.389831" elapsed="0.233997"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:28.624828" level="INFO">Typing text '400000' into text field 'id=priceMin'.</msg>
+<arg>id=priceMin</arg>
+<arg>${price}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:28.623828" elapsed="0.030536"/>
+</kw>
+<arg>400000</arg>
+<status status="PASS" start="2024-09-05T17:16:28.389831" elapsed="0.264533"/>
+</kw>
+<kw name="Enter Max Price" owner="searching">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:28.655372" level="INFO">Clicking element 'id=priceMax'.</msg>
+<arg>id=priceMax</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:28.654364" elapsed="0.228838"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:28.884201" level="INFO">Typing text '800000' into text field 'id=priceMax'.</msg>
+<arg>id=priceMax</arg>
+<arg>${price}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:28.883202" elapsed="0.032523"/>
+</kw>
+<arg>800000</arg>
+<status status="PASS" start="2024-09-05T17:16:28.654364" elapsed="0.261361"/>
+</kw>
+<kw name="Click Wyszukaj" owner="searching">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id=search-form-submit</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-09-05T17:16:28.916727" elapsed="0.428355"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:29.345082" level="INFO">Clicking button 'id=search-form-submit'.</msg>
+<arg>id=search-form-submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-05T17:16:29.345082" elapsed="0.277948"/>
+</kw>
+<status status="PASS" start="2024-09-05T17:16:28.915725" elapsed="0.708305"/>
+</kw>
+<kw name="Click Element By Partial Text" owner="searching">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-09-05T17:16:38.928171" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: WebDriver session does not exist, or is not active
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:448:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:515:13
+assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
+despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</msg>
+<msg time="2024-09-05T17:16:38.929603" level="FAIL">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:679:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:515:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:147:4
+GeckoDriver.prototype.findElements@chrome://remote/content/marionette/driver.sys.mjs:1638:15
+despatch@chrome://remote/content/marionette/server.sys.mjs:318:40
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</msg>
+<arg>xpath=//*[contains(text(), '${text}')]</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-09-05T17:16:29.624030" elapsed="9.310789">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:679:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:515:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:147:4
+GeckoDriver.prototype.findElements@chrome://remote/content/marionette/driver.sys.mjs:1638:15
+despatch@chrome://remote/content/marionette/server.sys.mjs:318:40
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), '${text}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-05T17:16:38.934819" elapsed="0.001013"/>
+</kw>
+<arg>Data dodania: najnowsze</arg>
+<status status="FAIL" start="2024-09-05T17:16:29.624030" elapsed="9.311802">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:679:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:515:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:147:4
+GeckoDriver.prototype.findElements@chrome://remote/content/marionette/driver.sys.mjs:1638:15
+despatch@chrome://remote/content/marionette/server.sys.mjs:318:40
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</status>
+</kw>
+<kw name="Select Type Dropdown Option" owner="searching">
+<arg>Cena: od najniższej</arg>
+<status status="NOT RUN" start="2024-09-05T17:16:38.935832" elapsed="0.001005"/>
+</kw>
+<kw name="Scrape All Pages" owner="scrapping">
+<arg>ALL_OFFERS=${ALL_OFFERS}</arg>
+<status status="NOT RUN" start="2024-09-05T17:16:38.936837" elapsed="0.000000"/>
+</kw>
+<kw name="Log Many" owner="BuiltIn">
+<arg>&amp;{ALL_OFFERS}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="NOT RUN" start="2024-09-05T17:16:38.936837" elapsed="0.000000"/>
+</kw>
+<kw name="Find Best Offer By Price Per Square Meter" owner="scrapping">
+<arg>&amp;{ALL_OFFERS}</arg>
+<status status="NOT RUN" start="2024-09-05T17:16:38.936837" elapsed="0.000997"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-05T17:16:38.937834" elapsed="2.115048"/>
+</kw>
+<status status="FAIL" start="2024-09-05T17:16:26.109502" elapsed="14.943380">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:679:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:515:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:147:4
+GeckoDriver.prototype.findElements@chrome://remote/content/marionette/driver.sys.mjs:1638:15
+despatch@chrome://remote/content/marionette/server.sys.mjs:318:40
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</status>
+</test>
+<status status="FAIL" start="2024-09-05T17:16:17.861138" elapsed="23.191744"/>
+</suite>
+<status status="FAIL" start="2024-09-05T17:16:17.840125" elapsed="23.214751"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Searching">Tests.Searching</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-05T17:16:18.166374" level="ERROR">Error in file 'C:\Projekty_Python\Robot2\BestHouseEver\Resources\scrapping.resource' on line 3: Importing library '../Resources/searching.resource' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\micha\AppData\Roaming\JetBrains\PyCharmCE2024.2\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Projekty_Python\Robot2\BestHouseEver\python_scripts
+  C:\Users\micha\AppData\Roaming\JetBrains\PyCharmCE2024.2\plugins\robotframework-intellij\lib
+  C:\Users\micha\AppData\Roaming\JetBrains\PyCharmCE2024.2\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\micha\AppData\Local\Programs\Python\Python312
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\ssqaapitest-1.0-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\woocommerce-2.1.1-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql-0.9.3-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests_oauthlib-1.3.0-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests-2.23.0-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytest_html-2.1.1-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytest-5.4.2-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\ordereddict-1.1-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\oauthlib-3.2.2-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi-2024.6.2-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\idna-2.10-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\chardet-3.0.4-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytest_metadata-3.1.1-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\colorama-0.4.6-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\atomicwrites-1.4.1-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\wcwidth-0.2.13-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy-0.13.1-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\more_itertools-10.3.0-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\attrs-23.2.0-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\packaging-24.1-py3.12.egg
+  C:\Users\micha\AppData\Local\Programs\Python\Python312\Lib\site-packages\py-1.11.0-py3.12.egg</msg>
+<msg time="2024-09-05T17:16:38.928171" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: WebDriver session does not exist, or is not active
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:448:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:515:13
+assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
+despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</msg>
+</errors>
+</robot>
