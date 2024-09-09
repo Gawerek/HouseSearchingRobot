@@ -40,6 +40,11 @@ Enter Min Price
     Click Element    id=priceMin
     Input Text    id=priceMin   ${price}
 
+Enter Min Area
+    [Arguments]     ${area}
+    Click Element    id=areaMin
+    Input Text    id=areaMin   ${area}
+
 Select Rooms
     [Arguments]     ${rooms_number}
     Wait Until Element Is Visible    css=#roomsNumber
