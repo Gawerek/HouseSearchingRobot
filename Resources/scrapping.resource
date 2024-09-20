@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Library     ../Resources/searching.resource
+Resource     ../Resources/steps_searching.resource
 Library     ../python_scripts/scraping_offers.py
 Library     Collections
 
@@ -21,7 +21,7 @@ Scrape Offers From Current Page
 
 Scrape All Pages
     [Arguments]    ${ALL_OFFERS}
-    FOR    ${i}    IN RANGE    1    2
+    FOR    ${i}    IN RANGE    1    100
         Scrape Offers From Current Page     ${ALL_OFFERS}
         # Check if the next page button exists
         ${next_page}=   Check If Next Page Exists

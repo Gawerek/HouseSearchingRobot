@@ -8,11 +8,12 @@ ${BROWSER}          Firefox
 
 
 *** Keywords ***
-Open Browser With Custom Profile
+Open Browser With Custom Profile Searching
     Open Browser    ${HOME_URL}    ${BROWSER}
     Maximize Browser Window
     Wait Until Element Is Visible    id=onetrust-accept-btn-handler
     Click Button    id=onetrust-accept-btn-handler
+
 
 Click Type Dropdown
     # Click the dropdown control element
@@ -25,10 +26,13 @@ Select Type Dropdown Option
 
 
 Select Distance From list
-    [Arguments]    ${class_name}    ${label_text}
+    [Arguments]    ${distance}
+    # Define the common class name inside the keyword (assuming it's static)
+    ${class_name}    Set Variable    css-100wgto
     # Click the element by its class name
     Click Element    css:.${class_name}
-    Click Element    xpath=//div[@aria-label='${label_text}']
+    # Click the element by distance (e.g., "+ 10 km")
+    Click Element    xpath=//div[@aria-label='${distance}']
 
 Enter Max Price
     [Arguments]     ${price}
