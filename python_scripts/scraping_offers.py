@@ -100,7 +100,7 @@ def find_best_offer(offers, n=10):
     unique_offers = []
     seen_urls = set()
     for offer in offers:
-        if offer['url'] not in seen_urls:
+        if offer['url'] not in seen_urls and 'inwesty' not in offer['url']:
             unique_offers.append(offer)
             seen_urls.add(offer['url'])
 
@@ -130,7 +130,7 @@ def save_offers_to_excel(offers, file_name="offers.xlsx"):
 
     # Add a timestamp to the file name
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    file_name_with_timestamp = f"{file_name.split('.')[0]}_{timestamp}.xlsx"
+    file_name_with_timestamp = f"{file_name.split('.')[0]}_{timestamp}.csv"
 
     # Define the relative path for the Data folder
     relative_path = os.path.join('Data', file_name_with_timestamp)
@@ -143,6 +143,6 @@ def save_offers_to_excel(offers, file_name="offers.xlsx"):
     df = pd.DataFrame(offers)
 
     # Save the DataFrame to an Excel file
-    df.to_excel(relative_path, index=False)
+    df.to_csv(relative_path, index=False)
 
     print(f"Offers saved to {relative_path}")
