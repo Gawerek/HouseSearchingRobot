@@ -56,9 +56,3 @@ Contributions are what make the open-source community such an amazing place to l
 Michał Gawron - michal.gawron98@gmail.com
 
 Project Link: [https://github.com/Gawerek/HouseSearchingRobot](https://github.com/Gawerek/HouseSearchingRobot)
-
-## Acknowledgments
-
-- Use this section to list resources you find helpful and would like to give credit to.
-- Any libraries or tools used in the project.
-- Inspiration, code snippets, etc.
